@@ -6,12 +6,12 @@ const port = process.env.PORT || 8888;
 
 require("dotenv").config();
 
-const s3BucketName = process.env.BUCKET_NAME;
+const s3BucketName = process.env.ENV_BUCKET_NAME;
 
 // Create an S3 object
 const s3 = new aws.S3({
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  accessKeyId: process.env.ENV_ACCESS_KEY_ID,
+  secretAccessKey: process.env.ENV_SECRET_ACCESS_KEY,
   Bucket: s3BucketName,
 });
 
